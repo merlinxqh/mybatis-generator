@@ -112,11 +112,13 @@ public class ResultMapWithoutBLOBsElementGenerator extends
                     "property", introspectedColumn.getJavaProperty())); //$NON-NLS-1$
             */
             String property = introspectedColumn.getJavaProperty();
-            if ("createBy".equals(property)) {
-            	property = property + "." + "id";
-            } else if ("lastUpdateBy".equals(property)) {
-            	property = property + "." + "id";
-            }
+            
+            //去除 resultMap createBy --> createBy.id
+//            if ("createBy".equals(property)) {
+//            	property = property + "." + "id";
+//            } else if ("lastUpdateBy".equals(property)) {
+//            	property = property + "." + "id";
+//            }
             
             resultElement.addAttribute(new Attribute(
                     "property", property));
