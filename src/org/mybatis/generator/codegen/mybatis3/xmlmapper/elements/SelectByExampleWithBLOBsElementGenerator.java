@@ -70,7 +70,8 @@ public class SelectByExampleWithBLOBsElementGenerator extends
         sb.append("from "); //$NON-NLS-1$
         sb.append(introspectedTable
                 .getAliasedFullyQualifiedTableNameAtRuntime() + " t ");//add by zhugj " t "
-        answer.addElement(new TextElement(sb.toString().replaceFirst("createBy", "createBy.id").replaceFirst("lastUpdateBy", "lastUpdateBy.id")));//edit by zhugj
+//        answer.addElement(new TextElement(sb.toString().replaceFirst("createBy", "createBy.id").replaceFirst("lastUpdateBy", "lastUpdateBy.id")));//edit by zhugj
+        answer.addElement(new TextElement(sb.toString()));//edit by leo 20180405
         answer.addElement(getExampleIncludeElement());
 
         ifElement = new XmlElement("if"); //$NON-NLS-1$

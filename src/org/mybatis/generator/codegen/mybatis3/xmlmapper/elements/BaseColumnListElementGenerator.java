@@ -52,7 +52,7 @@ public class BaseColumnListElementGenerator extends AbstractXmlElementGenerator 
                     .next());
         	fieldName = "t."+fieldName;
         	//注释 掉create_by as 'createBy.id' since 2018-04-04 by leo
-//            sb.append(fieldName.replaceFirst("t.create_by", "t.create_by as 'createBy.id'").replaceFirst("t.last_update_by", "t.last_update_by as 'lastUpdateBy.id'"));
+            sb.append(fieldName.replaceFirst("t.create_by", "t.create_by as 'createBy'").replaceFirst("t.last_update_by", "t.last_update_by as 'lastUpdateBy'"));
 
             if (iter.hasNext()) {
                 sb.append(", "); //$NON-NLS-1$

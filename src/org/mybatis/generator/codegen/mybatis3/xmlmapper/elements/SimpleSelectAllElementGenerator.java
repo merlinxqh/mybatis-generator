@@ -82,7 +82,8 @@ public class SimpleSelectAllElementGenerator extends
             sb.setLength(0);
             sb.append("order by "); //$NON-NLS-1$
             sb.append("t." + orderByClause);//add by zhugj " t "
-            answer.addElement(new TextElement(sb.toString().replaceFirst("createBy", "createBy.id").replaceFirst("lastUpdateBy", "lastUpdateBy.id")));//edit by zhugj
+            answer.addElement(new TextElement(sb.toString()));//edit by leo 20180405
+//            answer.addElement(new TextElement(sb.toString().replaceFirst("createBy", "createBy.id").replaceFirst("lastUpdateBy", "lastUpdateBy.id")));//edit by zhugj
         }
 
         if (context.getPlugins().sqlMapSelectAllElementGenerated(

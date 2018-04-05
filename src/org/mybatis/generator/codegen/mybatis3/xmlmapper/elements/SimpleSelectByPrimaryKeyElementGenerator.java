@@ -113,7 +113,8 @@ public class SimpleSelectByPrimaryKeyElementGenerator extends
             sb.append(" = "); //$NON-NLS-1$
             sb.append(MyBatis3FormattingUtilities
                     .getParameterClause(introspectedColumn));
-            answer.addElement(new TextElement(sb.toString().replaceFirst("createBy", "createBy.id").replaceFirst("lastUpdateBy", "lastUpdateBy.id")));//edit by zhugj
+//            answer.addElement(new TextElement(sb.toString().replaceFirst("createBy", "createBy.id").replaceFirst("lastUpdateBy", "lastUpdateBy.id")));//edit by zhugj
+            answer.addElement(new TextElement(sb.toString()));//edit by leo 20180405
         }
 
         if (context.getPlugins().sqlMapSelectByPrimaryKeyElementGenerated(

@@ -61,7 +61,7 @@ public class MyBatis3FormattingUtilities {
         StringBuilder sb = new StringBuilder();
 
         sb.append("#{"); //$NON-NLS-1$
-        sb.append(introspectedColumn.getJavaProperty(prefix).replaceFirst("createBy", "createBy.id").replaceFirst("lastUpdateBy", "lastUpdateBy.id"));//edit by zhugj
+        sb.append(introspectedColumn.getJavaProperty(prefix));//edit by zhugj
         sb.append(",jdbcType="); //$NON-NLS-1$
         sb.append(introspectedColumn.getJdbcTypeName());
 

@@ -305,7 +305,8 @@ public class FullyQualifiedTable {
         if (stringHasValue(domainObjectName)) {
             return domainObjectName;
         } else if (stringHasValue(runtimeTableName)) {
-            return getCamelCaseString(runtimeTableName, true);
+//            return getCamelCaseString(runtimeTableName, true);
+        	return getCamelCaseString(getTableName4Controller(), true);
         } else {
 //            return getCamelCaseString(introspectedTableName, true);
         	//去除表名前缀  since  2018-04-04 by leo
