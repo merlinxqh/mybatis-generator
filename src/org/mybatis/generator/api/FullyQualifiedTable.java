@@ -426,11 +426,15 @@ public class FullyQualifiedTable {
 		String temp = this.introspectedTableName.toLowerCase();
 		for (Map.Entry<String, String> te : this.replaceTablePrefixMap
 				.entrySet()) {
-			if (temp.indexOf(((String) te.getKey()).toLowerCase()) != -1) {
-				temp = temp.replaceAll(((String) te.getKey()).toLowerCase(),
-						((String) te.getValue()).toLowerCase());
-				break;
+			//修改为只替换前缀 字符
+			if(temp.startsWith(((String)te.getKey()).toLowerCase())){
+				temp = temp.substring(((String)te.getKey()).length());
 			}
+//			if (temp.indexOf(((String) te.getKey()).toLowerCase()) != -1) {
+//				temp = temp.replaceAll(((String) te.getKey()).toLowerCase(),
+//						((String) te.getValue()).toLowerCase());
+//				break;
+//			}
 		}
 		return temp;
 	}
